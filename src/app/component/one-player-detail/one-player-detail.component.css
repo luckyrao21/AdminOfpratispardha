@@ -1,0 +1,26 @@
+.col{
+  padding: 0%;
+}
+.image{
+  height: 100%;
+  width: 100%;
+}
+.image img{
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+}
+.detail{
+  font-size: 1.2vw ;
+  margin-left: 59px;
+
+}
+
+.container{
+  -webkit-box-shadow: 0px 1px 7px 4px rgba(0,0,0,0.55);
+  box-shadow: 0px 1px 7px 4px rgba(0,0,0,0.55);
+  padding: 15px;
+  width: 50%;
+  height: 100%;
+  margin-left: -1%;
+}

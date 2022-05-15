@@ -1,0 +1,44 @@
+.img-Div{
+  height: 200px;
+  width: 100%;
+}
+.img-Div img{
+  height: 100%;
+  width: 100%;
+}
+
+.bg{
+}
+
+.name{
+  font-size: 16px;
+  padding: 3px;
+  font-weight: 600;
+
+}
+.card{
+  background: #6569A4;
+background: -moz-linear-gradient(-45deg, #6569A4 0%, #68CBC9 100%, #317574 100%);
+background: -webkit-linear-gradient(-45deg, #6569A4 0%, #68CBC9 100%, #317574 100%);
+background: linear-gradient(135deg, #6569A4 0%, #68CBC9 100%, #317574 100%);
+}
+.age{
+  font-size: 2.4vh;
+  padding: 2.7px;
+
+}
+.Pattern{
+  font-size: 14px;
+  padding: 2.7px;
+
+}
+
+.Mob{
+  font-size: 2vh;
+  padding: 2.7px;
+
+}
+
+.Price{
+  font-size: 2vh;
+}

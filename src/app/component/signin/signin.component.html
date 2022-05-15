@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="email" #email="ngModel"  required [(ngModel)]="myAdmin.email" class="form-control" placeholder="Enter Email">
+    <span class="text-danger" *ngIf="email.errors && email.touched">Email is Required</span>
+  </div>
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" #pssword="ngModel" required [(ngModel)]="myAdmin.password" class="form-control" placeholder="Enter Password">
+    <span class="text-danger" *ngIf="pssword.errors && pssword.touched">Password is required </span>
+  </div>
+  <div class="form-group mt-3">
+    <button class="btn btn-outline-warning" (click)="googleSignin()"><i class="fa fa-google mr-2" style="font-size:medium;color:rgb(0, 0, 0);"><span style="margin-left: 2.5px;">Signin With Google</span></i></button>
+  </div>
+  <div class="form-group mt-3">
+    <button class="btn btn-outline-success" (click)="login()">Signin</button>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  background-color:  lavender;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  margin-top: 15%;
+  display: block;
+  color: black;
+  padding: 6px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #003274;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: rgb(174, 223, 237);
+  color: rgb(0, 0, 0);
+}
+
+
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+a{
+  background-color: lavender;
+  padding: 5px 10px;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+@import '~ngx-toastr/toastr';
+
+@import '~ngx-toastr/toastr-bs4-alert';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~ngx-toastr/toastr-bs4-alert';

@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <div class="row"  >
+    <div class="col col-md-6 col-lg-3" *ngFor="let data of Data ">
+      <div class="card mt-4" style="width:auto; height: auto; padding:15px">
+        <div class="img-Div">
+        <img class="card-img-top" src="{{data.image}}" alt="Card image">
+        </div>
+        <div class="card-body mt-2 bg">
+         <div class="name">{{data.name}}</div>
+         <div class="email">Email:{{data.email}}</div>
+         <div class="Mob">Mob:  {{data.mobile}}</div>
+        </div>
+        <button class="btn btn-outline-dark text-dark" (click)="fetchOne(data._id)">View More</button>
+    </div>
+  </div>
+</div>
