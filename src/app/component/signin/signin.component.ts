@@ -27,7 +27,7 @@ export class SigninComponent implements OnInit {
       console.log(this.DATA)
 
       if(this.DATA.message){
-        alert("invalid Credentials")
+        this.taost.error('invalid Credentials')
       }
       else{
         this.taost.success('login success')
@@ -68,6 +68,7 @@ export class SigninComponent implements OnInit {
     this.socialService.signIn(GoogleLoginProvider.PROVIDER_ID)
     this.socialService.authState.subscribe(data=>{
       this.admin.signinWithGoogle(data.email).subscribe(Daata=>{
+        this.taost.success("Login Success")
         this.DATA=Daata
         if(this.DATA.status){
           sessionStorage.setItem('jwt_token',this.DATA.token);

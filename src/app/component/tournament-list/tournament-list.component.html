@@ -1,14 +1,15 @@
 <div class="container mt-5">
-  <div class="row"  >
-    <div class="col col-md-6 col-lg-3" *ngFor="let data of DATA ">
-      <div class="card mt-4" style="width:auto; height: auto; padding:15px">
-        <img class="card-img-top" src="{{data.banner}}" alt="Card image" style="width:100%">
-        <div class="card-body">
-          <div class="name card-title">{{data.tournamentName}}</div>
-          <div class="name2 card-title">Orgainised By-{{data.orgainiserId.name}}</div>
-          <div class="date card-text">Start Date : {{data.tournamentStartDate| date: 'dd/MM/yyyy'}}<br>End Date : {{data.tournamentEndDate| date: 'dd/MM/yyyy'}}</div>
-          <div class="price card-text">Price Amount - {{data.firstPrize}} Rs/-</div>
+    <div class="row">
+        <div class="col col-md-6 col-lg-3" *ngFor="let data of DATA ">
+            <div class="card mt-4" style="width:auto; height: auto; padding:15px">
+                <img class="card-img-top" src="{{data.banner}}" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <div class="name card-title">{{data.tournamentName}}</div>
+                    <div class="name2 card-title">Orgainised By-{{data.orgainiserId.name}}</div>
+                    <div class="date card-text">Start Date : {{data.tournamentStartDate| date: 'dd/MM/yyyy'}}<br>End Date : {{data.tournamentEndDate| date: 'dd/MM/yyyy'}}</div>
+                    <div class="price card-text">Price Amount - {{data.firstPrize}} Rs/-</div>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-</div>
+    <ngx-spinner type="ball-scale-multiple" style="color: rgb(0, 0, 0); background-color:whitesmoke;">Loading ...</ngx-spinner>

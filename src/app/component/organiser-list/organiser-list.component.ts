@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { AdminService } from 'src/app/service/admin.service';
 
 @Component({
@@ -10,12 +11,14 @@ import { AdminService } from 'src/app/service/admin.service';
 export class OrganiserListComponent implements OnInit {
   Data:any
 
-  constructor(private _serve:AdminService,private _route:Router){
+  constructor(private _serve:AdminService,private spin:NgxSpinnerService,private _route:Router){
+    spin.show();
       this._serve.orgainiserLisrt().subscribe(data=>{
+    spin.hide();
+
         if(data){
           this.Data=data
           // console.warn(this.Data);
-
         }
       })
    }

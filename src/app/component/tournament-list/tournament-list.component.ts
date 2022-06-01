@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { AdminService } from 'src/app/service/admin.service';
 
 @Component({
@@ -7,14 +8,16 @@ import { AdminService } from 'src/app/service/admin.service';
   styleUrls: ['./tournament-list.component.css']
 })
 export class TournamentListComponent implements OnInit {
-  DATA:any
-  constructor(private _serve:AdminService) { }
+  DATA: any
+  constructor(private _serve: AdminService, private spin: NgxSpinnerService) { }
 
   ngOnInit(): void {
-      this._serve.tournamentList().subscribe(data=>{
-        console.log(data)
-        this.DATA=data
-      })
+    this.spin.show()
+    this._serve.tournamentList().subscribe(data => {
+      this.spin.hide();
+      console.log(data)
+      this.DATA = data
+    })
   }
-  
+
 }

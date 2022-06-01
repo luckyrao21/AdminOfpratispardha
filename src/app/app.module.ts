@@ -16,8 +16,10 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
 import { OrganiserListComponent } from './component/organiser-list/organiser-list.component';
 import { OneOrgainiserComponent } from './component/one-orgainiser/one-orgainiser.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxSpinnerModule } from "ngx-spinner";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  ToastrModule} from 'ngx-toastr';
+import { CacheService} from './service/cache.service';
 const socialProvider={
   provide:"SocialAuthServiceConfig",
   useValue:{
@@ -43,6 +45,7 @@ const socialProvider={
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxSpinnerModule,
     HttpClientModule,
     SocialLoginModule,
     BrowserAnimationsModule,
@@ -54,6 +57,11 @@ const socialProvider={
     provide: HTTP_INTERCEPTORS,
     useClass:TokenIntercepterService,
     multi:true,
+  },
+  {
+    useClass: CacheService,
+    provide: HTTP_INTERCEPTORS,
+    multi: true
   }],
   bootstrap: [AppComponent]
 })

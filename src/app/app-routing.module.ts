@@ -17,6 +17,10 @@ const routes: Routes = [{
   path:'signin', component:SigninComponent,
 },
 {
+  path:'', component:SigninComponent,
+}
+,
+{
   path:'playerList',component:PlayerListComponent,canActivate:[AuthGuard]
 },
 {
